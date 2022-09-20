@@ -8,3 +8,5 @@ export interface DefaultOptons {
   extra: Record<string, any> | undefined,
   jsError:boolean
 }
+
+export type RouterType = 'history' | 'hash'
