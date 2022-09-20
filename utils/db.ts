@@ -4,6 +4,7 @@ const StorageName = "spmLogs";
 const UploadThreshold = 5;
 const initialState = {
   click: [],
+  exposure: [],
   custom: []
 };
 
