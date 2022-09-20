@@ -1,4 +1,4 @@
-import {api} from "../cosntant/api"
+import { api } from "../constant/api";
 
 const StorageName = "spmLogs";
 const UploadThreshold = 5;

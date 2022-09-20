@@ -1,5 +1,5 @@
 import { spmLookup } from "../utils";
-import { EventsType } from "../../cosntant/index";
+import { EventsType } from "../../constant/index";
 import { saveLog } from "../db";
 
 const clickEventHandler = (e) => {
