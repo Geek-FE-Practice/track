@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page A</title>
+    <style>
+      .grid {
+        height: 500px;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin-bottom: 50vh;
+      }
+      .grid > div {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        text-align: center;
+      }
+
+      .blue {
+        background-color: cadetblue;
+      }
+
+      .red {
+        background-color: palevioletred;
+      }
+
+      .green {
+        background-color: aquamarine;
+      }
+
+      span {
+        color: black;
+        display: block;
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body data-spm-b="pageB">
+    <div class="grid blue">
+      <div data-spm-c="block2-1">
+        <h2>block 2-1</h2>
+        <span data-spm-d="point1">This is point 1</span>
+        <span data-spm-d="point2">This is point 2</span>
+        <span data-spm-d="point3">This is point 3</span>
+      </div>
+      <div data-spm-c="block2-2">
+        <h2>block 2-2</h2>
+        <span data-spm-d="point4">This is point 4</span>
+        <span data-spm-d="point5">This is point 5</span>
+        <span data-spm-d="point6">This is point 6</span>
+      </div>
+      <div data-spm-c="block2-3">
+        <h2>block 2-3</h2>
+        <span data-spm-d="point7">This is point 7</span>
+        <span data-spm-d="point8">This is point 8</span>
+        <span data-spm-d="point9">This is point 9</span>
+      </div>
+    </div>
+
+    <div class="grid red">
+      <div data-spm-c="block2-4">
+        <h2>block 2-4</h2>
+        <span data-spm-d="point10">This is point 10</span>
+        <span data-spm-d="point11">This is point 11</span>
+        <span data-spm-d="point12">This is point 12</span>
+      </div>
+      <div data-spm-c="block2-5">
+        <h2>block 2-5</h2>
+        <span data-spm-d="point13">This is point 13</span>
+        <span data-spm-d="point14">This is point 14</span>
+        <span data-spm-d="point15">This is point 15</span>
+      </div>
+      <div data-spm-c="block2-6">
+        <h2>block 2-6</h2>
+        <span data-spm-d="point16">This is point 16</span>
+        <span data-spm-d="point17">This is point 17</span>
+        <span data-spm-d="point18">This is point 18</span>
+      </div>
+    </div>
+
+    <div class="grid green">
+      <div data-spm-c="block2-7">
+        <h2>block 2-7</h2>
+        <span data-spm-d="point19">This is point 19</span>
+        <span data-spm-d="point20">This is point 20</span>
+        <span data-spm-d="point21">This is point 21</span>
+      </div>
+      <div data-spm-c="block2-8">
+        <h2>block 2-8</h2>
+        <span data-spm-d="point22">This is point 22</span>
+        <span data-spm-d="point23">This is point 23</span>
+        <span data-spm-d="point24">This is point 24</span>
+      </div>
+      <div data-spm-c="block2-9">
+        <h2>block 2-9</h2>
+        <span data-spm-d="point25">This is point 25</span>
+        <span data-spm-d="point26">This is point 26</span>
+        <span data-spm-d="point27">This is point 27</span>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
