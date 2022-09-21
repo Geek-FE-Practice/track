@@ -1,5 +1,5 @@
-import { HashEvents, HistoryEvents } from "../constant/index";
-import type { RouterType } from "../types/track";
+import { HashEvents, HistoryEvents } from "../../constant/index";
+import type { RouterType } from "../../types/track";
 
 export const initPvTrack = () => {
   initHistoryEvents();
@@ -12,13 +12,13 @@ export const initHistoryEvents = () => {
 };
 
 export const initRouterChangeListener = () => {
-  HistoryEvents.forEach((event) => {
+  HistoryEvents.forEach((event: any) => {
     window.addEventListener(event, () => {
       handlePvReport(event, "history");
     });
   });
 
-  HashEvents.forEach((event) => {
+  HashEvents.forEach((event: any) => {
     window.addEventListener(event, () => {
       handlePvReport(event, "hash");
     });

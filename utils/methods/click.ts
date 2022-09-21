@@ -2,7 +2,7 @@ import { spmLookup } from "../utils";
 import { EventsType } from "../../constant/index";
 import { saveLog } from "../db";
 
-const clickEventHandler = (e) => {
+const clickEventHandler = (e: any) => {
   const spm = spmLookup(e.target);
 
   if (spm) {

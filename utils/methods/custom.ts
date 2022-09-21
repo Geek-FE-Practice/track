@@ -1,7 +1,7 @@
-import { EventsType } from "../constant.js";
+import { EventsType } from "../../constant/index";
 import { saveLog } from "../db.js";
 
-const saveCustom = (data) => {
+const saveCustom = (data: string) => {
   saveLog(
     {
       data,
@@ -13,5 +13,5 @@ const saveCustom = (data) => {
 };
 
 export const initCustomClick = () => {
-  window._save_custom_log = saveCustom;
+  // window._save_custom_log = saveCustom;
 };
