@@ -22,7 +22,7 @@ export const getElemSpm = (current: HTMLElement, spmMap: SpmMap) => {
   }
 };
 
-// for getting the spm trace of the current element all the way up to body element
+// for getting the spm trace of the current element all the way up to html element
 // in our case we fix it to 4 layers: d1 -> c1 -> b1 -> a1
 export const spmLookup = (target: HTMLElement) => {
   const spmMap: SpmMap = {
@@ -31,9 +31,9 @@ export const spmLookup = (target: HTMLElement) => {
     C: null,
     D: null
   };
-  const bodyEl = document.querySelector("body");
+  const htmlEl = document.querySelector("html");
 
-  while (target && !target.isEqualNode(bodyEl)) {
+  while (target && !target.isEqualNode(htmlEl)) {
     getElemSpm(target, spmMap);
     target = target.parentNode as HTMLElement;
   }

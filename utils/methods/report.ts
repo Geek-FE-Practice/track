@@ -6,4 +6,8 @@ export const initReportListener = () => {
       uploadLogs();
     }
   });
+
+  setInterval(() => {
+    uploadLogs();
+  }, 10000);
 };
