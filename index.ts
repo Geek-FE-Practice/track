@@ -1,15 +1,16 @@
-import { initClickListener, initExposure, initPvTrack, initReportListener } from "./utils/methods/index";
+import {
+  initClickListener,
+  initExposure,
+  initPvTrack,
+  initReportListener
+} from "./utils/methods/index";
 
-export default class Track {
-  constructor() {
-    this.init();
-  }
-
-  private init() {
+(function () {
+  {
     initClickListener();
     // initCustomClick();
     initReportListener();
     initPvTrack();
     initExposure();
   }
-}
+})();

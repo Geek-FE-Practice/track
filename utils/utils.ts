@@ -1,3 +1,7 @@
+interface SpmMap {
+  [key: string]: string | null;
+}
+
 // for checking if current element contains the last spm value
 // which should be 'data-spm-d' in our case
 export const isSpmTail = (current: HTMLElement) => {
@@ -7,13 +11,13 @@ export const isSpmTail = (current: HTMLElement) => {
 };
 
 // for getting spm value of the current element
-export const getElemSpm = (current: HTMLElement, spmMap) => {
+export const getElemSpm = (current: HTMLElement, spmMap: SpmMap) => {
   const ds = current.dataset;
 
   for (let key in ds) {
     //  assume that dataset will be 'data-spm-a'
     if (key.startsWith("spm") && key.charAt(3) in spmMap) {
-      spmMap[key.charAt(3)] = ds[key];
+      spmMap[key.charAt(3)] = ds[key] || null;
     }
   }
 };
@@ -21,7 +25,7 @@ export const getElemSpm = (current: HTMLElement, spmMap) => {
 // for getting the spm trace of the current element all the way up to body element
 // in our case we fix it to 4 layers: d1 -> c1 -> b1 -> a1
 export const spmLookup = (target: HTMLElement) => {
-  const spmMap = {
+  const spmMap: SpmMap = {
     A: "HARDCODED_HOSTNAME",
     B: null,
     C: null,
